@@ -4,33 +4,31 @@
 <title>BMI Calculator</title>
 </head>
 <body>
-<h2>Calculate your BMI - by Kevin Alcaraz</h2>
-<input type="number" id="height" placeholder="Enter your height">
-<input type="number" id="weight" placeholder="Enter your weight">
-<button onclick="calculateBMI()">Your BMI</button>
-<p>Your BMI is: <span id="BMI"></span></p>
-<p>Which means: <span id="meaning"></span></p>  
+<h2>Calculate your Grade - by Kevin Alcaraz</h2>
+<input type="number" id="input" placeholder="Enter your Grade">
+<button onclick="calculateGrade()">Your Grade</button>                     
+<p>Your letter Grade is: <span id="Grade"></span></p>
 <script>
-  function calculateBMI() {
+  function calculateGrade() {                                            // Need to work more on this
     // Get the Values from input fields
-    let height = parseFloat(document.getElementById('height').value);
-    let weight = parseFloat(document.getElementById('weight').value);
+    let Grade = parseFloat(document.getElementById('Grade').value);
 
     //Calculate the BMI
-    let BMI = (weight*703)/(height*height);
-    let meaning;
-    if (BMI < 18.5) {
-      meaning = "You're under weight.";
-    } else if (BMI < 25) {
-      meaning = "You're Healthy";
-    } else if (BMI < 30) {
-      meaning = "You're overweight";
+    let Grade;
+    if (Grade < 50) {
+      meaning = "Failed.";
+    } else if (Grade < 65) {
+      meaning = "You need to review your material more.";
+    } else if (BMI < 75) {
+      meaning = "You need to review a little bit more. You got this!";
+    } else if (BMI < 85) {
+      meaning = "Good effort—keep improving.";
     } else {
-      meaning = "You're Obese";
+      meaning = "Excellent Work!";
 }
   
     // Displaying the BMI and BMI meaning
-    document.getElementById('BMI').textContent = BMI;
+    document.getElementById('Grade').textContent = Grade;
     document.getElementById('meaning').textContent = meaning;
   }
   
