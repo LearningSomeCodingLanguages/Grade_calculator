@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BMI Calculator</title>
+</head>
+<body>
+<h2>Calculate your BMI - by Kevin Alcaraz</h2>
+<input type="number" id="height" placeholder="Enter your height">
+<input type="number" id="weight" placeholder="Enter your weight">
+<button onclick="calculateBMI()">Your BMI</button>
+<p>Your BMI is: <span id="BMI"></span></p>
+<p>Which means: <span id="meaning"></span></p>  
+<script>
+  function calculateBMI() {
+    // Get the Values from input fields
+    let height = parseFloat(document.getElementById('height').value);
+    let weight = parseFloat(document.getElementById('weight').value);
+
+    //Calculate the BMI
+    let BMI = (weight*703)/(height*height);
+    let meaning;
+    if (BMI < 18.5) {
+      meaning = "You're under weight.";
+    } else if (BMI < 25) {
+      meaning = "You're Healthy";
+    } else if (BMI < 30) {
+      meaning = "You're overweight";
+    } else {
+      meaning = "You're Obese";
+}
+  
+    // Displaying the BMI and BMI meaning
+    document.getElementById('BMI').textContent = BMI;
+    document.getElementById('meaning').textContent = meaning;
+  }
+  
+</script>
+</body>
+</html>
