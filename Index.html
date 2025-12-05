@@ -6,25 +6,26 @@
 <body>
 <h2>Calculate your Grade - by Kevin Alcaraz</h2>
 <input type="number" id="input" placeholder="Enter your Grade">
-<button onclick="calculateGrade()">Your Grade</button>                     
-<p>Your letter Grade is: <span id="Grade"></span></p>
+<button onclick="calculateGrade()">Your Grade and Letter</button>
+<p>Your Number Grade is: <span id="Grade"></span></p>
+<p>Your letter Grade is: <span id="meaning"></span></p>
 <script>
-  function calculateGrade() {                                            // Need to work more on this
+  function calculateGrade() {
     // Get the Values from input fields
     let Grade = parseFloat(document.getElementById('Grade').value);
 
-    //Calculate the BMI
+    //Calculate the Grade
     let Grade;
     if (Grade < 50) {
-      meaning = "Failed.";
+      meaning = "F";
     } else if (Grade < 65) {
-      meaning = "You need to review your material more.";
-    } else if (BMI < 75) {
-      meaning = "You need to review a little bit more. You got this!";
-    } else if (BMI < 85) {
-      meaning = "Good effort—keep improving.";
+      meaning = "D";
+    } else if (Grade < 75) {
+      meaning = "C";
+    } else if (Grade < 85) {
+      meaning = "B";
     } else {
-      meaning = "Excellent Work!";
+      meaning = "A";
 }
   
     // Displaying the BMI and BMI meaning
