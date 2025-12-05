@@ -14,6 +14,7 @@
   function calculateGrade() {
     // Get the Values from input fields
     let Grade = parseFloat(document.getElementById('Grade').value);
+    document.getElementById('Grade').textContent = Grade;
 
     // Calculate the Grade
     if (Grade < 50) {
@@ -29,7 +30,6 @@
 }
   
     // Displaying the Grade and Letter Grade
-    document.getElementById('Grade').textContent = Grade;
     document.getElementById('LGrade').textContent = LGrade;
   }
   
