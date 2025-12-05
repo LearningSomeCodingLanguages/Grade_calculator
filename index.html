@@ -5,7 +5,7 @@
 </head>
 <body>
 <h2>Calculate your Grade - by Kevin Alcaraz</h2>
-<input type="number" id="input" placeholder="Enter your Grade">
+<input type="number" id="Grade" placeholder="Enter your Grade">
 <button onclick="calculateGrade()">Recieve your Grade and Letter</button>
 <p>Your Number Grade is: <span id='Grade'></span></p>
 <p>Your Letter Grade is: <span id='LGrade'></span></p>
@@ -17,7 +17,6 @@
 
     // Calculate the Grade
     let Grade;
-    let LGrade;
     if (Grade < 50) {
       LGrade = "F";
     } else if (Grade < 65) {
