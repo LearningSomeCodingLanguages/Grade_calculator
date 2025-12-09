@@ -7,14 +7,12 @@
 <h2>Calculate your Grade - by Kevin Alcaraz</h2>
 <input type="number" id="Grade" placeholder="Enter your Grade">
 <button onclick="calculateGrade()">Recieve your Grade and Letter</button>
-<P>Your Number Grade is: <span id='Grade'></span></p>
-<p>Your Letter Grade is: <span id='LGrade'></span></p>
+<p>Your Letter Grade is: <span style='font-color:blue;' id='LGrade'></span></p>
 
 <script>
   function calculateGrade() {
     // Get the Values from input fields
     const Grade = parseFloat(document.getElementById('Grade').value);
-    document.getElementById('Grade').textContent = Grade;
 
     // Calculate the Grade
     if (Grade < 50) {
